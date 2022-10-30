@@ -1,6 +1,6 @@
 file_format: "1"
 id: TD34
-name: TrongDong34
+name: TD34
 type: shield
 url: 
 requires: [seeed_xiao]
