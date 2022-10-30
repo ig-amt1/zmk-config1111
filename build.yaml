@@ -1,11 +1,11 @@
 include:
   - board: seeeduino_xiao_ble
-    shield: TD34_left
+    shield: TrongDong34_left
   - board: seeeduino_xiao_ble
-    shield: TD34_right
+    shield: TrongDong34_right
 #  - board: seeeduino_xiao_ble
 #    shield: 1key
-  - board: seeeduino_xiao_ble
-    shield: 2keys_left
-  - board: seeeduino_xiao_ble
-    shield: 2keys_right
+#  - board: seeeduino_xiao_ble
+#    shield: 2keys_left
+#  - board: seeeduino_xiao_ble
+#    shield: 2keys_right

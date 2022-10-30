@@ -1,0 +1,10 @@
+file_format: "1"
+id: 2keys
+name: 2keys
+type: shield
+requires: [seeed_xiao]
+features:
+  - keys
+siblings:
+  - 2keys_left
+  - 2keys_right
