@@ -1,10 +1,10 @@
 file_format: "1"
-id: 2keys
-name: 2keys
+id: TD34
+name: TrongDong34
 type: shield
 requires: [seeed_xiao]
 features:
   - keys
 siblings:
-  - 2keys_left
-  - 2keys_right
+  - TrongDong34_left
+  - TrongDong34_right
