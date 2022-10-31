@@ -1,7 +1,7 @@
 if SHIELD_MY_BOARD_LEFT
 
 config ZMK_KEYBOARD_NAME
-    default "2keys"
+    default "TrongDong34"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
