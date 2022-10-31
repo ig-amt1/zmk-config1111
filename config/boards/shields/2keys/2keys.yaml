@@ -1,6 +1,6 @@
 file_format: "1"
 id: 2keys
-name: TrongDong34
+name: 2keys
 type: shield
 requires: [seeed_xiao]
 features:

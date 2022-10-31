@@ -6,5 +6,5 @@ requires: [seeed_xiao]
 features:
   - keys
 siblings:
-  - TrongDong34_left
-  - TrongDong34_right
+  - TD34_left
+  - TD34_right
