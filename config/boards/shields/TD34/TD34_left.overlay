@@ -1,4 +1,4 @@
-#include "TD34.dtsi"
+#include "td34.dtsi"
 
 &kscan0 {
     col-gpios
