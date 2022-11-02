@@ -1,4 +1,4 @@
-if SHIELD_MY_BOARD_LEFT
+if SHIELD_TD34_LEFT
 
 config ZMK_KEYBOARD_NAME
     default "TrongDong34"
@@ -8,7 +8,7 @@ config ZMK_SPLIT_ROLE_CENTRAL
 
 endif
 
-if SHIELD_MY_BOARD_LEFT || SHIELD_MY_BOARD_RIGHT
+if SHIELD_TD34_LEFT || SHIELD_TD34_RIGHT
 
 config ZMK_SPLIT
     default y

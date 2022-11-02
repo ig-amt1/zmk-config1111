@@ -1,5 +1,5 @@
-config SHIELD_TD34_LEFT
+config SHIELD_2KEYS_LEFT
     def_bool $(shields_list_contains,2keys_left)
 
-config SHIELD_TD34_RIGHT
+config SHIELD_2KEYS_RIGHT
     def_bool $(shields_list_contains,2keys_right)
