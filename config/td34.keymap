@@ -1,7 +1,37 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
 
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        Fkey_combo {
+            bindings = <&mo 3>;
+            key-positions = <30 31>;
+        };
+
+        enter_combo {
+            bindings = <&kp ENTER>;
+            key-positions = <13 16>;
+        };
+
+        tab_combo {
+            bindings = <&kp TAB>;
+            key-positions = <14 15>;
+        };
+
+        prtsc_combo {
+            bindings = <&kp PRINTSCREEN>;
+            key-positions = <5 4>;
+        };
+
+        del_combo {
+            bindings = <&kp DELETE>;
+            key-positions = <24 25>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -16,19 +46,28 @@
 
         Layer__1 {
             bindings = <
- &kp ESC  &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS            &kp             &kp     &kp     &kp     &kp     &kp
- &kp TAB               &kp             &kp                   &kp            &kp             &kp     &kp     &kp     &kp     &kp
-     &kp               &kp             &kp                   &kp            &kp             &kp     &kp     &kp     &kp     &kp
-                                                          &trans  &kp BACKSPACE          &trans  &trans
+   &kp ESC  &kp LEFT_BRACKET      &kp LEFT_BRACE   &kp LEFT_PARENTHESIS  &kp SINGLE_QUOTE          &kp DOUBLE_QUOTES  &kp RIGHT_PARENTHESIS      &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp BACKSLASH
+   &kp TAB          &kp PLUS  &mt LEFT_ALT MINUS  &mt LEFT_CONTROL STAR         &kp SLASH              &kp AMPERSAND        &mt RCTRL EQUAL  &mt RALT UNDERSCORE           &kp EXCL     &kp DELETE
+ &kp TILDE            &kp LT          &kp DOLLAR              &kp CARET       &kp PERCENT                   &kp PIPE               &kp HASH          &kp AT_SIGN             &kp GT      &kp GRAVE
+                                                                 &trans     &kp BACKSPACE                     &trans                 &trans
             >;
         };
 
         Layer__2 {
             bindings = <
- &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
-                         &trans  &trans          &trans  &trans
+ &trans   &kp END    &kp UP   &kp HOME    &kp PAGE_UP           &kp STAR  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS
+ &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &kp PAGE_DOWN          &kp EQUAL  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6   &kp PLUS
+ &trans    &trans    &trans     &trans         &trans          &kp SLASH  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp ENTER
+                                &trans         &trans          &kp SPACE  &kp NUMBER_0
+            >;
+        };
+
+        Layer__3 {
+            bindings = <
+ &kp F1  &kp F2  &kp F3      &kp F4   &kp F5               &kp F6      &kp F7  &kp F8  &kp F9  &kp F10
+ &trans  &trans  &trans  &bt BT_CLR  &kp F11              &kp F12  &bt BT_NXT  &trans  &trans   &trans
+ &trans  &trans  &trans      &trans   &trans               &trans      &trans  &trans  &trans   &trans
+                             &trans   &trans          &bootloader      &reset
             >;
         };
     };
