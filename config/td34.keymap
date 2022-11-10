@@ -50,39 +50,6 @@
                 <&macro_tap &kp C>,
                 <&macro_release &kp RCTRL>,
         };
-        paste: paste_macro {
-            compatible = "zmk,behavior-macro";
-            label = "paste_macro";
-            #binding-cells = <0>;
-            wait-ms = <30>;
-            tap-ms = <40>;
-            bindings =
-                <&macro_press &kp RCTRL>,
-                <&macro_tap &kp V>,
-                <&macro_release &kp RCTRL>,
-        };
-        cut: cut_macro {
-            compatible = "zmk,behavior-macro";
-            label = "cut_macro";
-            #binding-cells = <0>;
-            wait-ms = <30>;
-            tap-ms = <40>;
-            bindings =
-                <&macro_press &kp RCTRL>,
-                <&macro_tap &kp X>,
-                <&macro_release &kp RCTRL>,
-        };
-        redo: redo_macro {
-            compatible = "zmk,behavior-macro";
-            label = "redo_macro";
-            #binding-cells = <0>;
-            wait-ms = <30>;
-            tap-ms = <40>;
-            bindings =
-                <&macro_press &kp RCTRL>,
-                <&macro_tap &kp z>,
-                <&macro_release &kp RCTRL>,
-        };
     };
 
     keymap {
