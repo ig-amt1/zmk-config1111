@@ -76,6 +76,15 @@
                 , <&macro_release &kp RCTRL>
                 ;
         };
+        tab: tab {
+            compatible = "zmk,behavior-macro";
+            label = "tab_macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp RCTRL>
+                , <&macro_tap &kp TAB>
+                , <&macro_release &kp RCTRL>
+                ;
+        };
     };
 
     keymap {
@@ -101,8 +110,8 @@
 
         Layer__2 {
             bindings = <
-  &trans   &kp END    &kp UP   &kp HOME    &kp PAGE_UP           &kp STAR  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS
- &kp TAB  &kp LEFT  &kp DOWN  &kp RIGHT  &kp PAGE_DOWN          &kp EQUAL  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6   &kp PLUS
+  &trans   &kp HOME    &kp UP   &kp END    &kp PAGE_UP           &kp STAR  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS
+ &tab  &kp LEFT  &kp DOWN  &kp RIGHT  &kp PAGE_DOWN          &kp EQUAL  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6   &kp PLUS
    &undo      &cut     &copy      &paste         &trans          &kp SLASH  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp ENTER
                                  &trans         &trans          &kp SPACE  &kp NUMBER_0
             >;
