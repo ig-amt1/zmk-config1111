@@ -128,11 +128,8 @@
     };
 };
 
-&i2c0 {
-  compatible = "seeeduino,xiao";
+&xiao_i2c {
   status = "okay";
-  sda-pin = <4>;
-  scl-pin = <5>;
 
   oled: ssd1306@3c {
     compatible = "solomon,ssd1306fb";
