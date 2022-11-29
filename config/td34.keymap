@@ -72,21 +72,14 @@
             bindings = <&reset>;
             key-positions = <0 10 20>;
         };
+
+        arte {
+            bindings = <&tog 8>;
+            key-positions = <16 17 33>;
+        };
     };
 
     macros {
-        		
-                
-        meh: behavior_meh {
-			compatible = "zmk,partial-behavior-application";
-			label = "MEH";
-			#binding-cells = <1>;
-			bindings = <&mods (MOD_GUI | MOD_LSFT | MOD_LCTL) PLACEHOLDER>;
-		};
-
-
-
-
         copy: copy {
             compatible = "zmk,behavior-macro";
             label = "copy_macro";
@@ -367,6 +360,54 @@
                 <&macro_tap>,
                 <&kp O>;
         };
+        saveai: saveai {
+            compatible = "zmk,behavior-macro";
+            label = "new_macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LSHFT &kp LCTRL &kp LALT>,
+                <&macro_tap>,
+                <&kp S>,
+                <&macro_release>,
+                <&kp LSHFT &kp LCTRL &kp LEFT_ALT>;
+        };
+        selaai: selaai {
+            compatible = "zmk,behavior-macro";
+            label = "new_macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp LSHFT>,
+                <&macro_tap>,
+                <&kp A>,
+                <&macro_release>,
+                <&kp LCTRL &kp LSHFT>;
+        };
+        delete: delete {
+            compatible = "zmk,behavior-macro";
+            label = "new_macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LSHFT>,
+                <&macro_tap>,
+                <&kp E>,
+                <&macro_release>,
+                <&kp LSHFT>;
+        };
+        caneta: caneta {
+            compatible = "zmk,behavior-macro";
+            label = "new_macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LSHFT>,
+                <&macro_tap>,
+                <&kp TILDE>,
+                <&macro_release>,
+                <&kp LSHFT>;
+        };
     };
 
     keymap {
@@ -441,6 +482,15 @@
        &kp F6         &kp B         &kp M         &kp T         &kp G          &trans  &trans  &trans  &trans  &trans
        &kp F1        &kp F2        &kp F3        &kp F4        &kp F5          &trans  &trans  &trans  &trans  &trans
                                                  &trans        &trans          &trans  &trans
+            >;
+        };
+
+        Layer__8 {
+            bindings = <
+   &kp ESC  &selaai   &kp W    &kp E     &kp T          &saveai  &trans  &trans  &trans  &tog 8
+ &kp LSHFT    &kp A   &kp S    &kp V   &delete           &trans  &trans  &trans  &trans  &trans
+ &kp LCTRL    &kp Z   &kp N    &kp B     &kp P           &trans  &trans  &trans  &trans  &trans
+                             &kp ESC  &kp LALT           &trans  &trans
             >;
         };
     };
