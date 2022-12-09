@@ -442,7 +442,7 @@
 
         Layer__3 {
             bindings = <
- &trans  &trans  &trans  &trans  &trans               &trans  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+ &trans  &trans  &trans  &kp LGUI  &trans               &trans  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
  &trans  &trans  &trans  &trans  &trans               &trans        &trans    &bt BT_PRV    &bt BT_NXT        &trans
  &trans  &trans  &trans  &trans  &trans               &trans        &trans        &trans        &trans    &bt BT_CLR
                          &trans  &trans          &bootloader        &reset
