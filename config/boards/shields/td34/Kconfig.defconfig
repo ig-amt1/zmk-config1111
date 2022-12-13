@@ -1,4 +1,4 @@
-if SHIELD_TD34_LEFT
+if SHIELD_TD34_RIGHT
 
 config ZMK_KEYBOARD_NAME
     default "TrongDong34"
